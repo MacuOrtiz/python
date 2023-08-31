@@ -1,11 +1,25 @@
+from paquete1.modulo1 import Cliente
 
-class Comprar:
-    def __init__(self, category, style, price, cantidad):
+class Comprar(Cliente): 
+      def __init__(self, category, style, price, cantidad, nombre, apellido, edad, correo, genero):
+        super().__init__(nombre, apellido, edad, correo, genero)
         self.category = category
         self.style = style
         self.price = price
         self.cantidad = cantidad
     
-    def comprar(self):
+     
+      def calcular_total(self):
         total = self.price * self.cantidad
-        return f"Su compra es de (cantidad={self.cantidad}), (category={self.category}), (style={self.style}), y su monto a pagar es de (total={total})"
+        return total
+
+    
+      def __str__(self):
+       total = self.calcular_total()
+       return f"Compra de {self.nombre} {self.apellido}:\n" \
+               f"Cantidad: {self.cantidad}\n" \
+               f"Categoría: {self.category}\n" \
+               f"Estilo: {self.style}\n" \
+               f"Monto total: {total}"
+
+    

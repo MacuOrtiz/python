@@ -9,7 +9,7 @@ class Cliente:
 
 
     def __str__(self):
-        return f"el clinete (nombre={self.nombre}), (apellido={self.apellido}), tiene (edad={self.edad}), años"
+        return f"El clinete {self.nombre} {self.apellido} tiene {self.edad} años"
 
 
 
