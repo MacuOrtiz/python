@@ -1,4 +1,4 @@
-from paquete1.modulo1 import Cliente
+from paquete.modulo1 import Cliente
 
 class Comprar(Cliente): 
       def __init__(self, category, style, price, cantidad, nombre, apellido, edad, correo, genero):
